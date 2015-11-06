@@ -22,10 +22,23 @@ a {
 	text-decoration: none;
 }
 
+#wrapper1920{
+	width: 1920px;
+	height:1080px;
+	background: black;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #wrapper, #hammerWrapper, #matchWrapper, #tickerWrapper {
 	background: yellow;
-	width: 1176px;
-	height:1464px;
+	width: 868px;
+	height:1080px;
 	overflow: hidden;
 	position: relative;
 }
@@ -62,38 +75,38 @@ a {
 
 .high-striker {
 	position: absolute;
-	top: 40px;
-	left: 290px;
+	top: 0;
+	left: 0;
 	z-index:10;
 	display: none;
 }
 
 .panel0, .panel1, .panel2, .panel3, .panel4 {
 	position: absolute;
-	height:245px;
-	width:280px;
-	left:400px;
+	height:185px;
+	width:185px;
+	left:350px;
 	background: #fff;
 	display: none;
 }
 
 .panel4 {
-	top:240px;
+	top:185px;
 	/*background: #ed1c24;*/
 }
 
 .panel3 {
-	top:490px;
+	top:370px;
 	/*background: #f16b2b;*/
 }
 
 .panel2 {
-	top:735px;
+	top:555px;
 	/*background: #f7941e;*/
 }
 
 .panel1 {
-	top:985px;
+	top:740px;
 	/*background: #fbb040;*/
 }
 
@@ -105,19 +118,19 @@ a {
 
 .xxxl-text, .xxl-text, .xl-text, .l-text, .m-text, .s-text, .xs-text, .xxs-text {
 	margin: 0;
-	margin-bottom: 40px;
+	margin-bottom: 15px;
 }
 
 .xxxl-text{
-	font-size: 175px;
-}
-
-.xxl-text {
 	font-size: 150px;
 }
 
+.xxl-text {
+	font-size: 125px;
+}
+
 .xl-text {
-	font-size: 100px;
+	font-size: 90px;
 }
 
 .l-text {
@@ -129,11 +142,11 @@ a {
 }
 
 .s-text {
-	font-size: 24px;
+	font-size: 36px;
 }
 
 .xs-text {
-	font-size: 18px;
+	font-size: 24px;
 }
 
 .xxs-text {
@@ -156,15 +169,15 @@ a {
 
 .war-img {
 	position: absolute;
-	top:40px;
-	left:100px;
+	top:0px;
+	left:0px;
 }
 
 .vs {
 	position: absolute;
-	top: 570px;
-	left: 560px;
-	font-size: 48px;
+	top: 430px;
+	left: 420px;
+	font-size: 36px;
 	text-align: center;
 	font-family: 'Slackey', 'Helvetica Neue','Arial',sans-serif;
 }
@@ -180,7 +193,7 @@ h4, h5 {
 
 .bieber-img {
 	right: 0;
-	width: 600px;
+	width: 460px;
 	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
     filter: url(#drop-shadow);
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
@@ -189,7 +202,7 @@ h4, h5 {
 
 .cyrus-img {
 	left:0;
-	width: 600px;
+	width: 460px;
 	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
     filter: url(#drop-shadow);
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=-10, OffY=10, Color='#444')";
@@ -199,15 +212,15 @@ h4, h5 {
 .cyrus-score, .bieber-score {
 	font-family: 'Slackey', 'Helvetica Neue','Arial',sans-serif; 
 	position: absolute;
-	font-size: 150px;
+	font-size: 125px;
 	font-weight: bold;
 	text-align: center;
-	top: 500px;
+	top: 370px;
 }
 
 .cyrus-score {
-	left: 225px;
+	left: 190px;
 }
 .bieber-score {
-	right: 225px;
+	right: 190px;
 }
