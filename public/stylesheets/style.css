@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-#wrapper, #hammerWrapper {
+#wrapper, #hammerWrapper, #matchWrapper {
 	background: yellow;
 	width: 1176px;
 	height:1464px;

@@ -9,6 +9,10 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var Twit = require('twit')
+
+var match = false;
+
 var app = express();
 
 var io = socket_io();
@@ -60,6 +64,31 @@ app.use(function(err, req, res, next) {
   });
 });
 
+///////////// TWITTER /////////////////
+
+var client = new Twit({
+	consumer_key: 'OSH9zEYe90ew8QSy0RcchedIx',
+	consumer_secret: 'XIqSRziiAut6RNgkhEdskf0SFTeKpDaA4fehWaREXn7FkbsPOZ',
+	access_token: '1319028200-zkM399rPAjx8MIn7HmMGqAYD1Ym6aNYCUUlsUrp',
+	access_token_secret: '5QHtfe2T2N1hoEVJ4Cl4EsSR22OfCFVdxa8AxJ2OcpmHd'
+});
+
+
+var bieberStream = client.stream('statuses/filter', {track: 'bieber', language: 'en'});
+var cyrusStream = client.stream('statuses/filter', {track: 'cyrus', language: 'en'})
+
+
+bieberStream.on('tweet', function(tweet){
+	io.emit('bieber','yes');
+	console.log('BIEBER')
+});
+
+cyrusStream.on('tweet', function(tweet){
+	io.emit('cyrus', 'yes');
+	console.log('CYRUS')
+})
+
+
 io.on('connection', function(socket){
 	console.log('a user connected');
 
@@ -76,6 +105,10 @@ io.on('connection', function(socket){
 	socket.on('show-text', function(msg){
 		console.log('show text');
 		socket.broadcast.emit('show-text', 'yes')
+	})
+
+	socket.on('match', function(msg){
+		console.log('start the match')
 	})
 
 	socket.on('disconnect', function(){

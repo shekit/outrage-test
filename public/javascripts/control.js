@@ -18,4 +18,14 @@ $(document).ready(function(){
 		event.preventDefault();
 		socket.emit('show-text', 'yes')
 	})
+
+	$(".start-match").on('click', function(event){
+		event.preventDefault();
+		socket.emit('match', 'start')
+	})
+
+	$(".stop-match").on('click', function(event){
+		event.preventDefault();
+		socket.emit('match', 'stop');
+	})
 })

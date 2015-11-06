@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(id='wrapper')
+    div(id='matchWrapper')
+      h2 Cyrus
+      h4(class='miley-score') 0
+      h2 Bieber
+      h4(class='bieber-score') 0
+      img(src='/images/bieber.png', class='bieber-img match-img')
+      img(src='/images/cyrus.png', class='cyrus-img match-img')
+  script(src='/javascripts/match.js')
