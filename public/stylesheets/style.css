@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -41,7 +41,7 @@ a {
 }
 
 #hammerWrapper {
-	background: url('../images/screen_dimensions.png')
+	background: url('../images/screen_dimensions.png') no-repeat center;
 }
 
 #textWrapper{
@@ -50,6 +50,7 @@ a {
 
 #matchWrapper {
 	display: none;
+	background: url('../images/yellow_bg.jpg') no-repeat center;
 }
 
 .img-center {
@@ -103,6 +104,25 @@ a {
 
 /****** MATCH *******/
 
+.war-img {
+	position: absolute;
+	top:40px;
+	left:100px;
+}
+
+.vs {
+	position: absolute;
+	top: 570px;
+	left: 560px;
+	font-size: 48px;
+	text-align: center;
+	font-family: 'Slackey', 'Helvetica Neue','Arial',sans-serif;
+}
+
+h4, h5 {
+	margin: 0;
+}
+
 .match-img {
 	position: absolute;
 	bottom: 0;
@@ -132,7 +152,7 @@ a {
 	font-size: 150px;
 	font-weight: bold;
 	text-align: center;
-	top: 300px;
+	top: 500px;
 }
 
 .cyrus-score {

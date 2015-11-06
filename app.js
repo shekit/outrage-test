@@ -121,11 +121,6 @@ io.on('connection', function(socket){
 		socket.broadcast.emit('show-match','yes')
 	})
 
-	socket.on('reset', function(msg){
-		console.log('reset the screen')
-		socket.broadcast.emit('reset','yes')
-	})
-
 	socket.on('match', function(msg){
 		
 		if(msg == 'start'){
@@ -138,6 +133,11 @@ io.on('connection', function(socket){
 			stream.stop();
 		}
 		
+	})
+
+	socket.on('reset', function(msg){
+		console.log('reset the screen')
+		socket.broadcast.emit('reset','yes')
 	})
 
 	socket.on('disconnect', function(){
