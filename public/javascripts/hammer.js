@@ -4,6 +4,7 @@ $(document).ready(function(){
 	var animateFunction;
 	var colors = ["red","#fbb040","#f7941e","#f16b2b","#ed1c24"];
 
+	var socket = io();
 
 	setTimeout(function(){
 		$(".img-center").fadeOut(400);
@@ -36,5 +37,13 @@ $(document).ready(function(){
 		resetColors();
 		clearInterval(animateFunction);
 	}
+
+	socket.on('show-pic', function(msg){
+		console.log('team pic')
+	})
+
+	socket.on('reset', function(msg){
+		location.reload();
+	})
 
 })
