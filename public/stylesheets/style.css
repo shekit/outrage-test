@@ -25,37 +25,40 @@ a {
 	margin-left: auto;
 }
 
+
 .high-striker {
 	position: absolute;
 	top: 40px;
 	left: 290px;
 	z-index:10;
+	display: none;
 }
 
-.one, .two, .three, .four, .five {
+.panel0, .panel1, .panel2, .panel3 {
 	position: absolute;
 	height:245px;
 	width:280px;
 	left:400px;
 	background: #fff;
+	display: none;
 }
 
-.one {
+.panel3 {
 	top:240px;
 	/*background: #ed1c24;*/
 }
 
-.two {
+.panel2 {
 	top:490px;
 	/*background: #f16b2b;*/
 }
 
-.three {
+.panel1 {
 	top:735px;
 	/*background: #f7941e;*/
 }
 
-.four {
+.panel0 {
 	top:985px;
 	/*background: #fbb040;*/
 }
