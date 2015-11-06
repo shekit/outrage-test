@@ -1,8 +1,61 @@
 body {
-  padding: 50px;
+  margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+#wrapper, #hammerWrapper {
+	background: yellow;
+	width: 1176px;
+	height:1464px;
+	overflow: hidden;
+	position: relative;
+}
+
+#hammerWrapper {
+	background: url('../images/screen_dimensions.png')
+}
+
+.img-center {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.high-striker {
+	position: absolute;
+	top: 40px;
+	left: 290px;
+	z-index:10;
+}
+
+.one, .two, .three, .four, .five {
+	position: absolute;
+	height:245px;
+	width:280px;
+	left:400px;
+	background: #fff;
+}
+
+.one {
+	top:240px;
+	/*background: #ed1c24;*/
+}
+
+.two {
+	top:490px;
+	/*background: #f16b2b;*/
+}
+
+.three {
+	top:735px;
+	/*background: #f7941e;*/
+}
+
+.four {
+	top:985px;
+	/*background: #fbb040;*/
 }
