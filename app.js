@@ -73,6 +73,11 @@ io.on('connection', function(socket){
 		socket.broadcast.emit('reset','yes')
 	})
 
+	socket.on('show-text', function(msg){
+		console.log('show text');
+		socket.broadcast.emit('show-text', 'yes')
+	})
+
 	socket.on('disconnect', function(){
 		console.log('a user disconnected');
 	})

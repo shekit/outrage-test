@@ -48,4 +48,8 @@ $(document).ready(function(){
 		location.reload();
 	})
 
+	socket.on('show-text', function(msg){
+		console.log('show text')
+	})
+
 })

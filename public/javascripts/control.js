@@ -13,4 +13,9 @@ $(document).ready(function(){
 
 		socket.emit('reset','yes')
 	})
+
+	$(".show-text").on('click', function(event){
+		event.preventDefault();
+		socket.emit('show-text', 'yes')
+	})
 })
