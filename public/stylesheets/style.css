@@ -45,7 +45,7 @@ a {
 }
 
 #textWrapper{
-
+	text-align: center;
 }
 
 #matchWrapper {
@@ -59,6 +59,7 @@ a {
 	margin-left: auto;
 }
 
+/***** HIGH STRIKER WRAPPER *******/
 
 .high-striker {
 	position: absolute;
@@ -99,6 +100,45 @@ a {
 
 .panel0 {
 	display: none;
+}
+
+/******* TEXT WRAPPER ********/
+
+.xxxl-text, .xxl-text, .xl-text, .l-text, .m-text, .s-text, .xs-text, .xxs-text {
+	margin: 0;
+	margin-bottom: 40px;
+}
+
+.xxxl-text{
+	font-size: 175px;
+}
+
+.xxl-text {
+	font-size: 150px;
+}
+
+.xl-text {
+	font-size: 100px;
+}
+
+.l-text {
+	font-size: 72px;
+}
+
+.m-text {
+	font-size: 48px;
+}
+
+.s-text {
+	font-size: 24px;
+}
+
+.xs-text {
+	font-size: 18px;
+}
+
+.xxs-text {
+	font-size: 14px;
 }
 
 
