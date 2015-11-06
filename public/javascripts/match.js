@@ -2,22 +2,35 @@ $(document).ready(function(){
 	
 	var socket = io();
 
-	var miley = $(".miley-score");
+	var cyrus = $(".cyrus-score");
 	var bieber = $(".bieber-score");
 
-	var mileyScore = 0;
+	var cyrusImage = $(".cyrus-img")
+	var bieberImage = $(".bieber-img")
+
+	var cyrusScore = 0;
 	var bieberScore = 0;
 
-	miley.text(mileyScore);
+	cyrus.text(cyrusScore);
 	bieber.text(bieberScore);
 
 	socket.on('bieber', function(msg){
 		bieberScore++;
 		bieber.text(bieberScore);
+		shake(bieberImage);
 	})
 
 	socket.on('cyrus', function(msg){
-		mileyScore++;
-		miley.text(mileyScore);
+		cyrusScore++;
+		cyrus.text(cyrusScore);
+		shake(cyrusImage);
 	})
+
+	function shake(div){                                                                                                                                                                                            
+	    console.log("shake")                                                                       
+		div.css({'bottom':'15px'});
+		setTimeout(function(){
+			div.css({'bottom':'0'})
+		},100)
+	}
 })

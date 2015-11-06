@@ -75,3 +75,44 @@ a {
 .panel0 {
 	display: none;
 }
+
+
+/****** MATCH *******/
+
+.match-img {
+	position: absolute;
+	bottom: 0;
+}
+
+.bieber-img {
+	right: 0;
+	width: 600px;
+	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
+}
+
+.cyrus-img {
+	left:0;
+	width: 600px;
+	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=-10, OffY=10, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=-10, OffY=10, Color='#444')";
+}
+
+.cyrus-score, .bieber-score {
+	position: absolute;
+	font-size: 150px;
+	font-weight: bold;
+	text-align: center;
+	top: 300px;
+}
+
+.cyrus-score {
+	left: 250px;
+}
+.bieber-score {
+	right: 250px;
+}

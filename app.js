@@ -75,18 +75,18 @@ var client = new Twit({
 
 
 var bieberStream = client.stream('statuses/filter', {track: 'bieber', language: 'en'});
-var cyrusStream = client.stream('statuses/filter', {track: 'cyrus', language: 'en'})
+var cyrusStream = client.stream('statuses/filter', {track: 'kim', language: 'en'})
 
 
-bieberStream.on('tweet', function(tweet){
-	io.emit('bieber','yes');
-	console.log('BIEBER')
-});
+// bieberStream.on('tweet', function(tweet){
+// 	io.emit('bieber','yes');
+// 	console.log('BIEBER')
+// });
 
-cyrusStream.on('tweet', function(tweet){
-	io.emit('cyrus', 'yes');
-	console.log('CYRUS')
-})
+// cyrusStream.on('tweet', function(tweet){
+// 	io.emit('cyrus', 'yes');
+// 	console.log('CYRUS')
+// })
 
 
 io.on('connection', function(socket){
