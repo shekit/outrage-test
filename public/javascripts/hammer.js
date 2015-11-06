@@ -72,6 +72,16 @@ $(document).ready(function(){
 		$("#matchWrapper").hide()
 		$("#tickerWrapper").fadeIn(200)
 		$("#teamWrapper").hide();
+		var imgCount = 0
+		setInterval(function(){
+			imgCount++;
+			if(imgCount>2){
+				imgCount = 1;
+				$(".pic2").fadeOut();
+			}
+			$(".pic"+imgCount).fadeIn()
+			console.log(imgCount)
+		},1500)
 	})
 
 	socket.on('reset', function(msg){

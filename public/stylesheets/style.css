@@ -140,6 +140,17 @@ a {
 	font-size: 14px;
 }
 
+/******* TICKER *******/
+
+.ticker-img {
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.pic1, .pic2 {
+	display: none
+}
 
 /****** MATCH *******/
 
