@@ -15,6 +15,15 @@ a {
 	position: relative;
 }
 
+#teamWrapper {
+	width: 1176px;
+	height:1464px;
+	overflow: hidden;
+	position: relative;
+	display: none;
+	background: white;
+}
+
 #hammerWrapper {
 	background: url('../images/screen_dimensions.png')
 }

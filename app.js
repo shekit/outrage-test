@@ -63,6 +63,16 @@ app.use(function(err, req, res, next) {
 io.on('connection', function(socket){
 	console.log('a user connected');
 
+	socket.on('show-pic', function(msg){
+		console.log('show team pic')
+		socket.broadcast.emit('show-pic','yes')
+	})
+
+	socket.on('reset', function(msg){
+		console.log('reset the screen')
+		socket.broadcast.emit('reset','yes')
+	})
+
 	socket.on('disconnect', function(){
 		console.log('a user disconnected');
 	})

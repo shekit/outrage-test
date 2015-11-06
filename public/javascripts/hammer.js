@@ -40,6 +40,8 @@ $(document).ready(function(){
 
 	socket.on('show-pic', function(msg){
 		console.log('team pic')
+		$("#hammerWrapper").hide()
+		$("#teamWrapper").fadeIn(200);
 	})
 
 	socket.on('reset', function(msg){

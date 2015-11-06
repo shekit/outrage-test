@@ -7,11 +7,11 @@ router.get('/hammer', function(req, res, next){
 	res.render('hammer')
 })
 
-router.get('match', function(req,res,next){
+router.get('/match', function(req,res,next){
 	res.render('match')
 })
 
-router.get('control', function(req, res,next){
+router.get('/control', function(req, res,next){
 	res.render('control')
 })
 
