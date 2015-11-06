@@ -34,7 +34,7 @@ a {
 	display: none;
 }
 
-.panel0, .panel1, .panel2, .panel3 {
+.panel0, .panel1, .panel2, .panel3, .panel4 {
 	position: absolute;
 	height:245px;
 	width:280px;
@@ -43,22 +43,26 @@ a {
 	display: none;
 }
 
-.panel3 {
+.panel4 {
 	top:240px;
 	/*background: #ed1c24;*/
 }
 
-.panel2 {
+.panel3 {
 	top:490px;
 	/*background: #f16b2b;*/
 }
 
-.panel1 {
+.panel2 {
 	top:735px;
 	/*background: #f7941e;*/
 }
 
-.panel0 {
+.panel1 {
 	top:985px;
 	/*background: #fbb040;*/
+}
+
+.panel0 {
+	display: none;
 }
