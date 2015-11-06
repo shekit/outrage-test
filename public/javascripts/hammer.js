@@ -41,15 +41,64 @@ $(document).ready(function(){
 	socket.on('show-pic', function(msg){
 		console.log('team pic')
 		$("#hammerWrapper").hide()
+		$("#textWrapper").hide()
+		$("#matchWrapper").hide()
 		$("#teamWrapper").fadeIn(200);
+	})
+
+	socket.on('show-text', function(msg){
+		console.log('show text')
+		$("#hammerWrapper").hide()
+		$("#textWrapper").fadeIn(200)
+		$("#matchWrapper").hide()
+		$("#teamWrapper").hide();
+	})
+
+	socket.on('show-match', function(msg){
+		console.log('show match')
+		$("#hammerWrapper").hide()
+		$("#textWrapper").hide()
+		$("#matchWrapper").fadeIn(200)
+		$("#teamWrapper").hide();
 	})
 
 	socket.on('reset', function(msg){
 		location.reload();
 	})
 
-	socket.on('show-text', function(msg){
-		console.log('show text')
+	
+
+	/////// MATCH UP //////////
+	var cyrus = $(".cyrus-score");
+	var bieber = $(".bieber-score");
+
+	var cyrusImage = $(".cyrus-img")
+	var bieberImage = $(".bieber-img")
+
+	var cyrusScore = 0;
+	var bieberScore = 0;
+
+	cyrus.text(cyrusScore);
+	bieber.text(bieberScore);
+
+	socket.on('bieber', function(msg){
+		bieberScore++;
+		bieber.text(bieberScore);
+		shake(bieberImage);
 	})
+
+	socket.on('cyrus', function(msg){
+		cyrusScore++;
+		cyrus.text(cyrusScore);
+		shake(cyrusImage);
+	})
+
+	function shake(div){                                                                                                                                                                                            
+	    console.log("shake")                                                                       
+		div.css({'bottom':'15px'});
+		setTimeout(function(){
+			div.css({'bottom':'0'})
+		},100)
+	}
 
 })

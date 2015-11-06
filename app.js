@@ -111,14 +111,19 @@ io.on('connection', function(socket){
 		socket.broadcast.emit('show-pic','yes')
 	})
 
-	socket.on('reset', function(msg){
-		console.log('reset the screen')
-		socket.broadcast.emit('reset','yes')
-	})
-
 	socket.on('show-text', function(msg){
 		console.log('show text');
 		socket.broadcast.emit('show-text', 'yes')
+	})
+
+	socket.on('show-match', function(msg){
+		console.log('show match')
+		socket.broadcast.emit('show-match','yes')
+	})
+
+	socket.on('reset', function(msg){
+		console.log('reset the screen')
+		socket.broadcast.emit('reset','yes')
 	})
 
 	socket.on('match', function(msg){

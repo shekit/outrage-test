@@ -7,6 +7,22 @@ a {
   color: #00B7FF;
 }
 
+.button {
+	text-align: center;
+	display: block;
+	padding: 20px 50px;
+	background: #f05a28;
+	border:1px solid #d85124;
+	color: #fff;
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+
+.button:active {
+	background: #d85124;
+	text-decoration: none;
+}
+
 #wrapper, #hammerWrapper, #matchWrapper {
 	background: yellow;
 	width: 1176px;
@@ -26,6 +42,14 @@ a {
 
 #hammerWrapper {
 	background: url('../images/screen_dimensions.png')
+}
+
+#textWrapper{
+
+}
+
+#matchWrapper {
+	display: none;
 }
 
 .img-center {

@@ -16,7 +16,7 @@ router.get('/control', function(req, res,next){
 })
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('hammer');
 });
 
 module.exports = router;
