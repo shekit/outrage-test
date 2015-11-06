@@ -26,6 +26,10 @@ $(document).ready(function(){
 		shake(cyrusImage);
 	})
 
+	socket.on('reset', function(msg){
+		location.reload();
+	})
+
 	function shake(div){                                                                                                                                                                                            
 	    console.log("shake")                                                                       
 		div.css({'bottom':'15px'});

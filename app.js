@@ -9,7 +9,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-var Twit = require('twit')
+var Twit = require('twit');
+var TwitterStreamChannels = require('twitter-stream-channels');
 
 var match = false;
 
@@ -66,27 +67,40 @@ app.use(function(err, req, res, next) {
 
 ///////////// TWITTER /////////////////
 
-var client = new Twit({
+
+var credentials = {
 	consumer_key: 'OSH9zEYe90ew8QSy0RcchedIx',
 	consumer_secret: 'XIqSRziiAut6RNgkhEdskf0SFTeKpDaA4fehWaREXn7FkbsPOZ',
 	access_token: '1319028200-zkM399rPAjx8MIn7HmMGqAYD1Ym6aNYCUUlsUrp',
 	access_token_secret: '5QHtfe2T2N1hoEVJ4Cl4EsSR22OfCFVdxa8AxJ2OcpmHd'
-});
+}
+
+var client = new TwitterStreamChannels(credentials)
+
+var channels = {
+	"bieber": ['bieber', 'justin bieber'],
+	"kim":["kim","kardashian"]
+}
+
+var stream = client.streamChannels({track:channels});
 
 
-var bieberStream = client.stream('statuses/filter', {track: 'bieber', language: 'en'});
-var cyrusStream = client.stream('statuses/filter', {track: 'kim', language: 'en'})
+stream.on('channels/bieber', function(tweet){
+	if(match){
+		io.emit('bieber','yes');
+		console.log('BIEBER');
+	}
+	
+})
+
+stream.on('channels/kim', function(tweet){
+	if(match){
+		io.emit('cyrus', 'yes');
+		console.log('CYRUS')
+	}
+})
 
 
-// bieberStream.on('tweet', function(tweet){
-// 	io.emit('bieber','yes');
-// 	console.log('BIEBER')
-// });
-
-// cyrusStream.on('tweet', function(tweet){
-// 	io.emit('cyrus', 'yes');
-// 	console.log('CYRUS')
-// })
 
 
 io.on('connection', function(socket){
@@ -108,11 +122,22 @@ io.on('connection', function(socket){
 	})
 
 	socket.on('match', function(msg){
-		console.log('start the match')
+		
+		if(msg == 'start'){
+			console.log('start the match')
+			match = true;
+			stream.start();
+		} else {
+			console.log('stop the match')
+			match = false;
+			stream.stop();
+		}
+		
 	})
 
 	socket.on('disconnect', function(){
 		console.log('a user disconnected');
+		
 	})
 })
 
