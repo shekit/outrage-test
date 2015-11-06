@@ -103,6 +103,7 @@ a {
 }
 
 .cyrus-score, .bieber-score {
+	font-family: 'Slackey', 'Helvetica Neue','Arial',sans-serif; 
 	position: absolute;
 	font-size: 150px;
 	font-weight: bold;
@@ -111,8 +112,8 @@ a {
 }
 
 .cyrus-score {
-	left: 250px;
+	left: 225px;
 }
 .bieber-score {
-	right: 250px;
+	right: 225px;
 }
