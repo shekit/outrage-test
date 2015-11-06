@@ -22,7 +22,7 @@ a {
 	text-decoration: none;
 }
 
-#wrapper, #hammerWrapper, #matchWrapper {
+#wrapper, #hammerWrapper, #matchWrapper, #tickerWrapper {
 	background: yellow;
 	width: 1176px;
 	height:1464px;

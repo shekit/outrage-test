@@ -43,6 +43,7 @@ $(document).ready(function(){
 		$("#hammerWrapper").hide()
 		$("#textWrapper").hide()
 		$("#matchWrapper").hide()
+		$("#tickerWrapper").hide()
 		$("#teamWrapper").fadeIn(200);
 	})
 
@@ -51,6 +52,7 @@ $(document).ready(function(){
 		$("#hammerWrapper").hide()
 		$("#textWrapper").fadeIn(200)
 		$("#matchWrapper").hide()
+		$("#tickerWrapper").hide()
 		$("#teamWrapper").hide();
 	})
 
@@ -59,6 +61,16 @@ $(document).ready(function(){
 		$("#hammerWrapper").hide()
 		$("#textWrapper").hide()
 		$("#matchWrapper").fadeIn(200)
+		$("#tickerWrapper").hide()
+		$("#teamWrapper").hide();
+	})
+
+	socket.on('show-ticker', function(msg){
+		console.log('show ticker')
+		$("#hammerWrapper").hide()
+		$("#textWrapper").hide()
+		$("#matchWrapper").hide()
+		$("#tickerWrapper").fadeIn(200)
 		$("#teamWrapper").hide();
 	})
 

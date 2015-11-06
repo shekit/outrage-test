@@ -13,6 +13,11 @@ $(document).ready(function(){
 		socket.emit('show-text', 'yes')
 	})
 
+	$(".show-ticker").on('click', function(event){
+		event.preventDefault();
+		socket.emit('show-ticker','yes')
+	})
+
 	$(".show-match").on('click', function(event){
 		event.preventDefault();
 		socket.emit('show-match','yes')

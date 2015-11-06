@@ -125,6 +125,11 @@ io.on('connection', function(socket){
 		socket.broadcast.emit('show-text', 'yes')
 	})
 
+	socket.on('show-ticker', function(msg){
+		console.log('show-ticker');
+		socket.broadcast.emit('show-ticker','yes')
+	})
+
 	socket.on('show-match', function(msg){
 		console.log('show match')
 		socket.broadcast.emit('show-match','yes')
