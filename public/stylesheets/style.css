@@ -35,7 +35,7 @@ a {
 	margin-right: auto;
 }
 
-#wrapper, #hammerWrapper, #matchWrapper, #tickerWrapper {
+#wrapper, #hammerWrapper, #matchWrapper, #tickerWrapper, #teamMatchWrapper {
 	background: yellow;
 	width: 868px;
 	height:1080px;
@@ -60,7 +60,7 @@ a {
 	text-align: center;
 }
 
-#matchWrapper {
+#matchWrapper, #teamMatchWrapper {
 	display: none;
 	background: url('../images/yellow_bg.jpg') no-repeat center;
 }
@@ -212,15 +212,66 @@ h4, h5 {
 .cyrus-score, .bieber-score {
 	font-family: 'Slackey', 'Helvetica Neue','Arial',sans-serif; 
 	position: absolute;
-	font-size: 125px;
+	font-size: 110px;
 	font-weight: bold;
 	text-align: center;
 	top: 370px;
 }
 
 .cyrus-score {
-	left: 190px;
+	left: 130px;
 }
 .bieber-score {
-	right: 190px;
+	right: 130px;
+}
+
+
+/****** TEAM MATCH ******/
+.aj-score, .reb-score, .abhi-score {
+	font-family: 'Slackey', 'Helvetica Neue','Arial',sans-serif; 
+	position: absolute;
+	font-size: 80px;
+	font-weight: bold;
+	text-align: center;
+	top: 370px;
+}
+
+.aj-score {
+ 	left:110px;
+}
+
+.reb-score {
+	left:410px;
+}
+
+.abhi-score {
+	right:110px;
+}
+
+.aj-img{
+	left: 0;
+	width: 300px;
+	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
+}
+
+.reb-img{
+	left: 300px;
+	width: 300px;
+	z-index: 10;
+	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
+}
+
+.abhi-img{
+	right: -50px;
+	width: 370px;
+	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=10, OffY=-10, Color='#444')";
 }

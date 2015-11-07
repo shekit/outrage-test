@@ -45,6 +45,7 @@ $(document).ready(function(){
 		$("#matchWrapper").hide()
 		$("#tickerWrapper").hide()
 		$("#teamWrapper").fadeIn(200);
+		$("#teamMatchWrapper").hide();
 	})
 
 	socket.on('show-text', function(msg){
@@ -54,6 +55,7 @@ $(document).ready(function(){
 		$("#matchWrapper").hide()
 		$("#tickerWrapper").hide()
 		$("#teamWrapper").hide();
+		$("#teamMatchWrapper").hide();
 	})
 
 	socket.on('show-match', function(msg){
@@ -63,6 +65,17 @@ $(document).ready(function(){
 		$("#matchWrapper").fadeIn(200)
 		$("#tickerWrapper").hide()
 		$("#teamWrapper").hide();
+		$("#teamMatchWrapper").hide();
+	})
+
+	socket.on('show-team-match', function(msg){
+		console.log('show team match')
+		$("#hammerWrapper").hide()
+		$("#textWrapper").hide()
+		$("#matchWrapper").hide()
+		$("#tickerWrapper").hide()
+		$("#teamWrapper").hide();
+		$("#teamMatchWrapper").fadeIn(200);
 	})
 
 	socket.on('show-ticker', function(msg){
@@ -72,6 +85,7 @@ $(document).ready(function(){
 		$("#matchWrapper").hide()
 		$("#tickerWrapper").fadeIn(200)
 		$("#teamWrapper").hide();
+		$("#teamMatchWrapper").hide();
 		var imgCount = 0
 		setInterval(function(){
 			imgCount++;
@@ -122,5 +136,42 @@ $(document).ready(function(){
 			div.css({'bottom':'0'})
 		},100)
 	}
+
+	/////// TEAM MATCH UP //////////
+	var aj = $(".aj-score");
+	var reb = $(".reb-score");
+	var abhi = $(".abhi-score");
+
+	var ajImage = $(".aj-img")
+	var rebImage = $(".reb-img")
+	var abhiImage = $(".abhi-img")
+
+	var ajScore = 0;
+	var rebScore = 0;
+	var abhiScore = 0;
+
+	aj.text(ajScore);
+	reb.text(rebScore);
+	abhi.text(abhiScore)
+
+	socket.on('aj', function(msg){
+		ajScore++;
+		aj.text(ajScore);
+		shake(ajImage);
+	})
+
+	socket.on('reb', function(msg){
+		rebScore++;
+		reb.text(rebScore);
+		shake(rebImage);
+	})
+
+	socket.on('abhi', function(msg){
+		abhiScore++;
+		abhi.text(abhiScore);
+		shake(abhiImage);
+	})
+
+
 
 })

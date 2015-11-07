@@ -33,6 +33,23 @@ $(document).ready(function(){
 		socket.emit('match', 'stop');
 	})
 
+
+	$(".show-team-match").on('click', function(event){
+		event.preventDefault();
+		socket.emit('show-team-match','yes')
+	})
+
+	$(".start-team-match").on('click', function(event){
+		event.preventDefault();
+		socket.emit('team-match', 'start')
+	})
+
+	$(".stop-team-match").on('click', function(event){
+		event.preventDefault();
+		socket.emit('team-match', 'stop');
+	})
+
+
 	$(".reset-screen").on('click', function(event){
 		event.preventDefault();
 

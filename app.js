@@ -13,6 +13,7 @@ var Twit = require('twit');
 var TwitterStreamChannels = require('twitter-stream-channels');
 
 var match = false;
+var team_match = false;
 
 var app = express();
 
@@ -88,7 +89,10 @@ var client = new TwitterStreamChannels(credentials)
 
 var channels = {
 	"bieber": ['bieber', 'justin bieber'],
-	"kim":["kim","kardashian"]
+	"kim":["kim","kardashian"],
+	"aj":["bieber"],
+	"reb":["keystone"],
+	"abhi":["trump"]
 }
 
 var stream = client.streamChannels({track:channels});
@@ -106,6 +110,28 @@ stream.on('channels/kim', function(tweet){
 	if(match){
 		io.emit('cyrus', 'yes');
 		console.log('CYRUS')
+	}
+})
+
+stream.on('channels/aj', function(tweet){
+	if(team_match){
+		io.emit('aj','yes');
+		console.log('AJ');
+	}
+	
+})
+
+stream.on('channels/reb', function(tweet){
+	if(team_match){
+		io.emit('reb', 'yes');
+		console.log('REB')
+	}
+})
+
+stream.on('channels/abhi', function(tweet){
+	if(team_match){
+		io.emit('abhi', 'yes');
+		console.log('ABHI')
 	}
 })
 
@@ -146,7 +172,24 @@ io.on('connection', function(socket){
 			match = false;
 			stream.stop();
 		}
+	})
+
+	socket.on('show-team-match', function(msg){
+		console.log('show team match')
+		socket.broadcast.emit('show-team-match','yes')
+	})
+
+	socket.on('team-match', function(msg){
 		
+		if(msg == 'start'){
+			console.log('start the team match')
+			team_match = true;
+			stream.start();
+		} else {
+			console.log('stop the team match')
+			team_match = false;
+			stream.stop();
+		}
 	})
 
 	socket.on('reset', function(msg){
