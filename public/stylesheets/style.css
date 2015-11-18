@@ -202,8 +202,8 @@ h4, h5 {
 }
 
 .cyrus-img {
-	left:60px;
-	width: 250px;
+	left:0px;
+	width: 310px;
 	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
     filter: url(#drop-shadow);
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=-10, OffY=10, Color='#444')";

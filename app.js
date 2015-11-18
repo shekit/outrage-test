@@ -88,8 +88,8 @@ var credentials = {
 var client = new TwitterStreamChannels(credentials)
 
 var channels = {
-	"bieber": ['bieber', 'justin bieber'],
-	"kim":["redcup","starbucks"],
+	"bieber": ['bieber'],
+	"kim":["trump","donald trump"],
 	"aj":["bieber"],
 	"reb":["keystone"],
 	"abhi":["trump"]
