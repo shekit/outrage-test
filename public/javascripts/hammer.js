@@ -6,14 +6,14 @@ $(document).ready(function(){
 
 	var socket = io();
 
-	setTimeout(function(){
-		$(".img-center").fadeOut(400);
-		$(".high-striker").fadeIn(800);
-		$(".panel1, .panel2, .panel3, .panel4").fadeIn(800);
-		setTimeout(function(){
-			animate();
-		},900)
-	}, 1500)
+	// setTimeout(function(){
+	// 	$(".img-center").fadeOut(400);
+	// 	$(".high-striker").fadeIn(800);
+	// 	$(".panel1, .panel2, .panel3, .panel4").fadeIn(800);
+	// 	setTimeout(function(){
+	// 		animate();
+	// 	},900)
+	// }, 1500)
 
 	function animate(){
 		animateFunction = setInterval(function(){

@@ -54,6 +54,7 @@ a {
 
 #hammerWrapper {
 	background: url('../images/screen_dimensions.png') no-repeat center;
+	background: yellow;
 }
 
 #textWrapper{
@@ -201,8 +202,8 @@ h4, h5 {
 }
 
 .cyrus-img {
-	left:0;
-	width: 460px;
+	left:60px;
+	width: 250px;
 	-webkit-filter: drop-shadow(10px 10px 3px rgba(0,0,0,0.5));
     filter: url(#drop-shadow);
     -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=-10, OffY=10, Color='#444')";
