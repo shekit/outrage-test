@@ -131,9 +131,9 @@ $(document).ready(function(){
 
 	function shake(div){                                                                                                                                                                                            
 	    console.log("shake")                                                                       
-		div.css({'bottom':'15px'});
+		div.css({'bottom':'0'});
 		setTimeout(function(){
-			div.css({'bottom':'0'})
+			div.css({'bottom':'-15px'})
 		},100)
 	}
 

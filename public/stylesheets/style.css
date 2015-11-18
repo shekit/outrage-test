@@ -189,7 +189,7 @@ h4, h5 {
 
 .match-img {
 	position: absolute;
-	bottom: 0;
+	bottom: -15px;
 }
 
 .bieber-img {
